@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Section */
+.navbar-main{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0px;
+}
+.navbar-link a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+/* Body Section */
+.main-body{
+    background-image: url(./Images/minimal-dark-coding-wallpaper-2560×1600.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-body .left-section{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+}
+/* Body text animation */
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }  
+/* About Section */
+.about-main{
+    background-color: #f1f2ec;
+}
+.about-main .about-section .left-about{
+    width: 50%;
+}
+.about-main .about-section .right-about{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.about-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Works section */
+.work-main{
+    height: 450px;
+}
+.work-main .work-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Portfolio section */
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.timeline-container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translate(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.text-box{
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.text-box h2{
+    font-weight: 600;
+}
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.left-container{
+    left: 0;
+}
+.right-container{
+    left: 50%;
+}
+.timeline-container i{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+.right-container i{
+    left: -20px;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 5s linear forwards;
+}
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(0, 0, 0, 0.8);
+    right: -15px;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgba(0, 0, 0, 0.8);
+    left: -15px;
+}
+
+/* Skills section */
+.skills-main{
+    background-color: #9fb9c5;
+    border-bottom: 3px solid black;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    .main-body {
+      background-image: none;
+      display: flex;
+      background-image: url(./Images/minimal-dark-coding-wallpaper-2560×1600.jpg);
+    }
+    .main-body .left-section{
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+    }
+
+    .about-section{
+        display: block;
+    }
+    .about-section .left-about{
+        display: none;
+    }
+    
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .timeline-container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid rgba(0, 0, 0, 0.8);
+        border-left: 0;
+        left: -15px;
+    }
+  }
