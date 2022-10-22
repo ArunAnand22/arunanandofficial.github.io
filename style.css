@@ -185,8 +185,9 @@
     }
     .about-section .right-about{
         width: 100%;
+        height: 500px;
         background-color: #fff;
-
+        overflow-x: scroll;
     }
     
     .timeline{
