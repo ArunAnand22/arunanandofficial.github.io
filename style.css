@@ -57,16 +57,6 @@
     align-items: center;
 }
 
-/* Works section */
-.work-main{
-    height: 450px;
-}
-.work-main .work-section{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 /* Portfolio section */
 .timeline{
     position: relative;
@@ -190,6 +180,11 @@
     }
     .about-section .left-about{
         display: none;
+    }
+    .about-section .right-about{
+        width: 100%;
+        background-color: #fff;
+
     }
     
     .timeline{
